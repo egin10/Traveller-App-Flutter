@@ -7,9 +7,11 @@ class SectionTitle extends StatelessWidget {
     Key? key,
     @required this.title,
     @required this.press,
+    @required this.rightTitle,
   }) : super(key: key);
 
   final String? title;
+  final String? rightTitle;
   final GestureTapCallback? press;
 
   @override
@@ -30,7 +32,7 @@ class SectionTitle extends StatelessWidget {
           Spacer(),
           GestureDetector(
             onTap: press,
-            child: Text("See All"),
+            child: Text(rightTitle!),
           ),
         ],
       ),
